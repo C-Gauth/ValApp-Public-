@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@color/val_teal"
+    android:id="@+id/groupItemFull"
+    android:descendantFocusability="blocksDescendants">
+
+    <!-- Customize the group item layout -->
+    <TextView
+        android:id="@+id/groupTitle"
+        android:text="Name of the lineup"
+        android:layout_marginLeft="40dp"
+        android:layout_width="0dp"
+        android:height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+    <ImageButton
+        android:id="@+id/favButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_empty"
+        android:background="@color/val_teal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</LinearLayout>

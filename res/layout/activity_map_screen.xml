@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/val_black"
+    android:theme="@style/Theme.ValorantLineups.NoActionBar"
+    tools:context=".MapScreen">
+
+    <!-- Custom Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- NestedScrollView for Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- GridLayout for ImageButtons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ascent_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Ascent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ascent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintVertical_bias="0.012" />
+
+            <ImageButton
+                android:id="@+id/bind_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:contentDescription="Bind"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bind"
+                app:layout_constraintBottom_toBottomOf="@+id/ascent_button"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.611"
+                app:layout_constraintStart_toEndOf="@+id/ascent_button"
+                app:layout_constraintTop_toTopOf="@+id/ascent_button"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageButton
+                android:id="@+id/breeze_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:contentDescription="Breeze"
+                android:scaleType="centerCrop"
+                android:src="@drawable/breeze"
+                app:layout_constraintEnd_toEndOf="@+id/ascent_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ascent_button"
+                app:layout_constraintTop_toBottomOf="@+id/ascent_button" />
+
+            <ImageButton
+                android:id="@+id/fracture_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Fracture"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fracture"
+                app:layout_constraintEnd_toEndOf="@+id/bind_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/bind_button"
+                app:layout_constraintTop_toBottomOf="@+id/bind_button" />
+
+            <ImageButton
+                android:id="@+id/haven_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:contentDescription="Haven"
+                android:scaleType="centerCrop"
+                android:src="@drawable/haven"
+                app:layout_constraintBottom_toTopOf="@id/lotus_button"
+                app:layout_constraintEnd_toEndOf="@+id/breeze_button"
+                app:layout_constraintHorizontal_bias="0.58"
+                app:layout_constraintStart_toStartOf="@+id/breeze_button"
+                app:layout_constraintTop_toBottomOf="@id/breeze_button"
+                app:layout_constraintVertical_bias="0.223" />
+
+            <ImageButton
+                android:id="@+id/icebox_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:contentDescription="IceBox"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icebox"
+                app:layout_constraintEnd_toEndOf="@+id/fracture_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/fracture_button"
+                app:layout_constraintTop_toBottomOf="@+id/fracture_button" />
+
+            <ImageButton
+                android:id="@+id/lotus_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:contentDescription="Lotus"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lotus"
+                app:layout_constraintBottom_toTopOf="@id/split_button"
+                app:layout_constraintEnd_toStartOf="@+id/pearl_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/haven_button"
+                app:layout_constraintTop_toBottomOf="@id/haven_button" />
+
+            <ImageButton
+                android:id="@+id/pearl_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:contentDescription="Pearl"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pearl"
+                app:layout_constraintEnd_toEndOf="@+id/icebox_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/icebox_button"
+                app:layout_constraintTop_toBottomOf="@+id/icebox_button"
+                app:srcCompat="@drawable/pearl" />
+
+            <ImageButton
+                android:id="@+id/split_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:contentDescription="Split"
+                android:scaleType="centerCrop"
+                android:src="@drawable/split"
+                app:layout_constraintEnd_toEndOf="@+id/lotus_button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/lotus_button"
+                app:layout_constraintTop_toBottomOf="@id/lotus_button" />
+
+            <ImageButton
+                android:id="@+id/sunset_button"
+                android:layout_width="194dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:contentDescription="Sunset"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sunset"
+                app:layout_constraintEnd_toEndOf="@+id/pearl_button"
+                app:layout_constraintTop_toBottomOf="@+id/pearl_button"
+                app:srcCompat="@drawable/sunset" />
+
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

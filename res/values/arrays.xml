@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dropdown_items">
+        <item>Select an agent</item>
+        <item> Breach </item>
+        <item> Brimstone </item>
+        <item> Cypher </item>
+        <item> Deadlock </item>
+        <item> Fade </item>
+        <item> Gekko </item>
+        <item> Harbor </item>
+        <item> Kay/O </item>
+        <item> Killjoy </item>
+        <item> Neon </item>
+        <item> Omen </item>
+        <item> Raze </item>
+        <item> Sage </item>
+        <item> Sova </item>
+        <item> Viper </item>
+        <!-- -->
+        <item> Yoru </item>
+        <item> Astra </item>
+        <item> Chamber </item>
+        <item> Iso </item>
+        <item> Jett</item>
+        <item> Pheonix </item>
+        <item> Reyna </item>
+        <item> Skye </item>
+        -->
+
+    </string-array>
+</resources>
